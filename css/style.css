@@ -1,0 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito", sans-serif;
+    background-color: rgb(23, 23, 23);
+    perspective: 600px;
+}
+.logo-includer{
+    width: 80%;
+    height: 95%;
+    margin-left: 10%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.logo-head{
+    width: 80vw;
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    font-size: 18;
+}
+.logo{
+    width: 170px;
+    height: 60px;
+    animation-name: change;
+    animation-duration:0.5s ;
+    animation-iteration-count: infinite;
+}
+@keyframes change{
+    50%{
+        transform: scale(1.2,1.2);
+    }
+}
+.logo:hover{
+    animation-play-state: paused;
+}
+.logo-list{
+    list-style: none;
+    margin-right: 60px;
+    float: right;
+    margin-left: 50px;
+}
+.logo-list li{
+    padding: 10px ;   
+    display: inline;   
+    position: relative;
+    text-shadow:0px 0px 6px #eec596;
+}
+.logo-list li a{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0 15px;
+    line-height: 60px;
+}
+.logo-icon-div{
+    display: inline;
+    float: right;
+    line-height: 60px;
+    font-size: 27px;
+    color: aliceblue;
+    position: relative;
+}
+.logo-icon{
+    margin: 0 7px;
+    color:  white;
+}
+.logo-list li a::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 0;
+    height: 100%-2px;
+    transition:all 0.3s;
+    transform: scale(0,1);
+    transform-origin: right;
+}
+.logo-list li a:hover::before{
+    width: 100%;
+    height: 100%-2px;
+    border-top: 2px solid  #ee8244;
+    border-bottom: 2px solid   #ee8244;
+    transform: scale(1,1);
+    cursor: pointer;
+}
+.logo-list li a::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 2px solid #ee8244;
+    border-right: 2px solid #ee8244;
+    transition: 0.3s;
+    width: 100%-2px;
+    height: 0px;
+    transform: scale(1,0);
+    transform-origin: bottom;
+}
+.logo-list li a:hover::after{
+    width: 100%-2px;
+    height: 100%;
+    transform: scale(1,1);
+    cursor: pointer;
+}
+.logo-bag{
+    font-size: 17px;
+}
+.logo-big-content{
+    width: 100%;
+    height: 73vh;
+    background-color: cadetblue;
+    background-image: url(../images/tamas-pap-mUkfZKpKoEo-unsplash\ \(1\).jpg);
+    background-size: cover;
+    background-position:0rem;
+    box-shadow:0px 0px 19px 4px #ecbe98 ;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+.logo-overlay{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.3) ;
+    position: relative;
+}
+.logo-big-content:hover{
+    transform: scale(1.02,1.02);
+}
+.logo-content{
+    margin: 110px 630px 0 630px;
+    margin-top: 100px;
+    width: 550px;
+    color: #ee8244;
+    position: absolute;
+    font-size: 45px;
+    text-shadow:0px 5px 7px #000000;
+}
+.logo-inner-button{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: rgb(23, 23, 23) ;
+    color: rgb(201, 195, 188);
+    font-size: 20px;
+    box-shadow:-2px -2px 0px 0px #f6a678 ;
+    text-shadow:0px 0px 3px #f6a678;
+    cursor: pointer;
+}
+.logo-button:hover{
+    text-shadow:0px 0px 17px #eec596;
+    transform: translate(-2px,-2px);
+    box-shadow:0px 0px 0px 0px #ecbe98 ;
+}
+.logo-bag{
+    text-shadow:0px 0px 6px #eec596;
+}
+.logo-button{
+    box-shadow:5px 5px 19px 4px #000000 ;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
+.logo-inner-button:hover{
+    text-shadow:0px 0px 17px #eec596;
+    box-shadow:0px 0px 0px 0px #ecbe98 ;
+}
+.logo-flavors{
+    width: 550px;
+    height: 200px;
+    background-color: rgb(23, 23, 23);
+    z-index: 10;
+    position: absolute;
+    padding: 20px;
+    transform: scale(0,0);
+    color: #ee8244;
+}
+.logo-flavors-li{
+    position: relative;
+}
+.logo-flavors-table{
+    width: 550px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+.logo-div-item{
+    cursor: pointer;
+    text-shadow:0px 5px 7px #000000;
+}
+.logo-first-text{
+    border-bottom: 2px dotted white;
+}
+.logo-flavors-li:hover .logo-flavors{
+    transform: scale(1,1);
+    transition: 0.3s;
+}
+.logo-zero-div{
+    position: absolute;
+    width: 17px;
+    height: 22px;
+    background-color: #ee8244;
+    margin-top: -40px;
+    margin-left: 125px;
+    border-radius: 50%;
+}
+.logo-zero-icon{
+    font-size: 12px;
+    color: white;
+    margin: 5.5px 4px; 
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.collect-main-div{
+    width: 80%;
+    height: 65%;
+    margin-left: 10%;
+    position: relative;
+}
+.collect-headline{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(230, 180, 123);
+    text-shadow:0px 5px 7px #000000;
+}
+.collect-line{
+    height: 3px;
+    width: 100px;
+    margin: auto;
+    background-color: rgb(225, 222, 222);
+    margin-top: 5px;
+    transition: 0.5s;
+}
+.collect-head:hover .collect-line{
+    transform: scaleX(1.5);
+}
+.collect-parent{
+    width: 100%;
+    height: 80%;
+    margin-top: 1.9%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.collect-item{
+    height: 100%;
+    width: 24.5%;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.collect-content{
+    position: absolute;
+}
+.collect-image{
+    width: 100%;
+    height: 300px;
+}
+.collect-text{
+    margin-top: 20px;
+    color: rgb(198, 201, 204);
+}
+.collect-caption{
+    font-size: 18px;
+    color: rgb(229, 155, 70);
+}
+.collect-arrow{
+    position: absolute;
+    width: 40px;
+    height:40px;
+    margin: 325px 0 0 257px;
+    transform: scale(0,0);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.collect-icon{
+    font-size: 40px;
+}
+.collect-item:hover .collect-arrow{
+    transform: scale(1,1);
+    color: rgb(201, 195, 188);
+}
+.collect-item:hover{
+    transform: scale(1.02,1.02);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.discount-container{
+    width: 80%;
+    height: 43vh;
+    margin-left: 10%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.discount-div1,.discount-div2,.discount-div3{
+    height: 100%;
+    width: 24%;
+    position: relative;
+    padding: 15px;
+    transition: 0.3s;
+}
+.discount-div1{
+    flex-grow: 10;
+    margin-right: 21px;
+    padding: 0;
+}
+.discount-div2{
+    flex-grow: 0;
+    margin-right: 21px;
+    background-image: url(../images/alex-jones-VPnvh8vj7lc-unsplash.jpg);
+    background-size: cover;
+}
+.discount-div3{
+    flex-grow: 0;
+    background-image: url(../images/slnc-FRChhrMEbnA-unsplash.jpg);
+    background-size: cover;
+}
+.discount-icon-div{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.discount-icon{
+    font-size: 55px;
+    color: rgb(229, 155, 70);
+}
+.discount-headline{
+    width: 400px;
+    height: 70px;
+    margin: 0px 0 0 55px;
+}
+.discount-head{
+    font-size: 27px;
+    color: rgb(229, 155, 70);
+}
+.discount-paragraph-div{
+    width: 565px;
+    height: 150px;
+    margin: 15px 0 0 0px;
+    position: absolute;
+    font-size: 16px;
+}
+.discount-lines{
+    position: absolute;
+    width: 200px;
+    height: 10px;
+    margin:180px 0 0 360px ;
+    display: flex;
+    justify-content: space-between;
+}
+.discount-line{
+    width: 58px;
+    height: 3px;
+    transition: 0.3s;
+    background-color: rgb(229, 155, 70);
+}
+.discount-div1:hover .discount-pp{
+transform: scaleX(1.2);
+}
+.discount-p{
+    transform-origin: right;
+}
+.discount-div1:hover .discount-p{
+    transform: scaleX(1.2);
+}
+.discount-ppp{
+    transform-origin: left;
+}
+.discount-div1:hover .discount-ppp{
+    transform: scaleX(1.2);
+}
+.discount-caption{
+    font-size: 23px;
+    margin-top: 10px;  
+    color: rgb(92, 56, 14);
+}
+.discount-div2:hover{
+    transform: scale(1.1,1.1);
+}
+.discount-div3:hover{
+    transform: scale(1.1,1.1);
+}
+.discount-paragraph{
+    color: rgb(201, 195, 188);
+}
+.discount-text{
+    color: rgb(201, 195, 188);
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.prop-container{
+    width: 80%;
+    height: 220px;
+    margin-left: 10%;
+    padding-top: 30px;
+    border-bottom: 1px solid rgb(193, 189, 189) ;
+    position: relative;
+}
+.prop-parent{
+    width: 100%;
+    height: 140px;
+    column-count: 5;
+    column-gap: 0px;
+    column-rule: 1px solid rgb(193, 189, 189) ;
+}
+.prop-item{
+    text-align: center;
+}
+.prop-img{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background-size: cover;
+    background-position: top;
+    transition: 0.3s;
+}
+.prop-image1{
+    background-image: url(../images/Screenshot_2024-09-11_145046-removebg-preview.png);
+}
+.prop-image2{
+    background-image: url(../images/Screenshot_2024-09-11_144802-removebg-preview.png);
+}
+.prop-image3{
+    background-image: url(../images/Screenshot_2024-09-11_142754-removebg-preview.png);
+}
+.prop-image4{
+    background-image: url(../images/Screenshot_2024-09-11_144129-removebg-preview.png);
+}
+.prop-image5{
+    background-image: url(../images/Screenshot_2024-09-11_143330-removebg-preview.png);
+}
+.prop-item:hover .prop-img{
+    background-position: bottom;
+}
+.prop-head{
+    color:rgb(241, 155, 98) ;
+    font-size: 17px;
+}
+.prop-caption{
+   color: rgb(193, 189, 189) ;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.price-container{
+    width: 80%;
+    height: 190vh;
+    margin-left: 10%;
+    position: relative;
+    padding-top: 50px;
+    transform-style: preserve-3d;
+}
+.price-headline{
+    font-size: 40px;
+    text-align: center;
+    color:  rgb(229, 155, 70);
+    text-shadow:0px 5px 7px #000000;
+}
+.price-line{
+    width: 95px;
+    height: 2px;
+    background-color: rgb(193, 189, 189) ;
+    margin: auto;
+    margin-top: 7px;
+    transition: all 0.3s;
+}
+.price-headline-div:hover .price-line{
+    transform: scaleX(1.3);
+}
+.price-types-div{
+    height: 25px;
+    width: 500px;
+    margin: 25px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.price-part{
+    width: 125px;
+    height: 100%;
+    text-align: center;
+}
+.price-ype{
+    transition: 0.3s;
+    line-height: 25px;
+    font-size: 20px;
+    cursor: pointer;
+   color: rgb(193, 189, 189);
+}
+.price-part:hover .price-ype{
+    transform: scale(1.1,1.1);
+    color: rgb(240, 235, 235);
+}
+.price-big-parent{
+    width: 100%;
+    height: 158vh;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}
+.price-parent{
+    position: relative;
+}
+.price-front,.price-back{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    transition: all 0.3s;
+}
+.price-front{
+    z-index: 10;
+    backface-visibility: hidden;
+    background-size: cover;
+}
+.price-back{
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg);
+}
+.price-image{
+    width: 100%;
+    height: 100%;
+}
+.price-content{
+    position: absolute;
+    margin-top: 450px;
+}
+.price-full-icon,.price-empty-icon{
+    color: gold;
+}
+.price-para{
+    color: rgb(193, 189, 189) ;
+}
+.price-dollar{
+    color:   rgb(193, 189, 189);
+}
+.price-h{
+    margin-bottom: 15px;
+    color: gold;
+}
+.price-t{
+    margin-bottom: 20px;
+    color:   rgb(193, 189, 189);
+}
+.price-button{
+    width: 70px;
+    height: 70px;
+    border: 0;
+    background-color:  rgb(87, 82, 82);
+    border-radius: 50%;
+    color: gold;
+    font-size: 20px;
+    cursor: pointer;
+    animation-name: change;
+    animation-duration:0.5s ;
+    animation-iteration-count: infinite;
+}
+.price-button:hover{
+    animation-play-state: paused;
+}
+.price-parent:hover .price-front {
+    transform: rotateY(180deg);
+}
+.price-parent:hover .price-back {
+    transform: rotateY(360deg);
+}
